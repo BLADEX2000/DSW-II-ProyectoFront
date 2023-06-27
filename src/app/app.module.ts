@@ -15,6 +15,8 @@ import { EditAsignaturaComponent } from './components/asignatura/edit-asignatura
 import { ListarProfesorComponent } from './components/profesor/listar-profesor/listar-profesor.component';
 import { AddProfesorComponent } from './components/profesor/add-profesor/add-profesor.component';
 import { EditProfesorComponent } from './components/profesor/edit-profesor/edit-profesor.component';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { EditProfesorComponent } from './components/profesor/edit-profesor/edit-
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

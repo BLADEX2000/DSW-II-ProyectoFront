@@ -1,1 +1,25 @@
-<p>listar-profesor works!</p>
+<h1>Listado de Profesores</h1>
+<br />
+<br />
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Celular</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let profe of profesores">
+      <td>{{ profe.idprofesor }}</td>
+      <td>{{ profe.nomprofesor }}</td>
+      <td>{{ profe.apeprofesor }}</td>
+      <td>{{ profe.telfprofesor }}</td>
+
+    </tr>
+  </tbody>
+</table>
