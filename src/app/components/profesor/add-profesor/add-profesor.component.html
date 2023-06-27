@@ -1,1 +1,26 @@
-<p>add-profesor works!</p>
+ 
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Profesor</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group"> <label for="">Nombres:</label>
+                <input type="text" [(ngModel)]="modelProfesor.nomprofesor" name="nombre" class="form-control" />
+            </div>
+
+            <div class="form-group"> <label for="">Apellidos:</label>
+                <input type="text" [(ngModel)]="modelProfesor.apeprofesor" name="apePaterno" class="form-control" />
+            </div>
+
+            <div class="form-group"> <label for="">Telefono:</label>
+                <input type="text" [(ngModel)]="modelProfesor.telfprofesor" name="apeMaterno" class="form-control" />
+            </div>
+
+   
+            <button (click)="guardar(modelProfesor)" class="btn btn-danger">Guardar</button> &nbsp;  
+            <button (click)="cancelar()" class="btn btn-secondary">Cancelar</button>
+        </form>
+
+    </div>
+</div>

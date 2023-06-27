@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 import { ListarAlumnoComponent } from './components/alumno/listar-alumno/listar-alumno.component';
 import { AddAlumnoComponent } from './components/alumno/add-alumno/add-alumno.component';
 import { EditAlumnoComponent } from './components/alumno/edit-alumno/edit-alumno.component';
@@ -17,6 +17,7 @@ import { AddProfesorComponent } from './components/profesor/add-profesor/add-pro
 import { EditProfesorComponent } from './components/profesor/edit-profesor/edit-profesor.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,35 @@
-<p>listar-alumno works!</p>
+<h1>Listado de Alumnos</h1>
+<br />
+<br />
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Celular</th>
+      <th>Sección</th>
+      <th>Grado</th>
+      <th>Carrera</th>
+      <th>Acciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{ alumno.idalumno }}</td>
+      <td>{{ alumno.nomalumno }}</td>
+      <td>{{ alumno.apealumno }}</td>
+      <td>{{ alumno.telfalumno }}</td>
+      <td>{{ alumno.seccion.desseccion }}</td>
+      <td>{{ alumno.grado.desgrado }}</td>
+      <td>{{ alumno.carrera.descarrera }}</td>
+      <td>
+        <button  style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
+        <button  class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -2,6 +2,7 @@
 <br />
 <br />
 
+<button (click)="nuevo()" class="btn btn-success">Agregar</button>
 
 <table class="table table-striped">
   <thead>
@@ -10,16 +11,22 @@
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Celular</th>
+      <th>Acciones</th>
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let profe of profesores">
-      <td>{{ profe.idprofesor }}</td>
-      <td>{{ profe.nomprofesor }}</td>
-      <td>{{ profe.apeprofesor }}</td>
-      <td>{{ profe.telfprofesor }}</td>
-
+    <tr *ngFor="let profesor of profesores">
+      <td>{{ profesor.idprofesor }}</td>
+      <td>{{ profesor.nomprofesor }}</td>
+      <td>{{ profesor.apeprofesor }}</td>
+      <td>{{ profesor.telfprofesor }}</td>
+      <td>
+        <button (click)="editar(profesor)" style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
+        <button  class="btn btn-danger">Eliminar</button>
+      </td>
     </tr>
   </tbody>
 </table>
+
+

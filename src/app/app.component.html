@@ -1,13 +1,25 @@
 <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="navbar-nav mr-auto">
-      <li class="nav-item">
+      <li class="nav-item display:flex flex-direction: row">
         <a routerLink="profesores" class="nav-link">Profesores</a>
+        <a routerLink="alumnos" class="nav-link">Alumnos</a>
+        <a routerLink="asignaturas" class="nav-link">Asignaturas</a>
       </li>
     </div>
   </nav>
   <div class="container mt-3">
     <router-outlet></router-outlet>
   </div>
+  <p>
+    <mat-toolbar color="primary">
+      <span>Portal Alumnos</span>
+      <span class="example-spacer"></span>
+      <button mat-button><a style="color: white;" routerLink="profesores" class="nav-link">Profesores</a></button>
+      <button mat-button>Alumnos</button>
+      <button mat-button>Asignaturas</button>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
 </div>
 

@@ -14,4 +14,16 @@ export class ProfesorService {
     return this.http.get<Profesor[]>(this.url);
   }
 
+  createProfesor(profesor: Profesor){
+    return this.http.post<Profesor>(this.url,profesor)
+  }
+
+  getProfesorId(id:number){
+    return this.http.get<Profesor>(this.url+"/"+id);
+  }
+
+  updateProfesor(profesor:Profesor){
+    return this.http.put<Profesor>(this.url,profesor);
+  }
+
 }

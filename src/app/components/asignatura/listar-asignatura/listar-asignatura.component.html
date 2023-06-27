@@ -1,1 +1,32 @@
-<p>listar-asignatura works!</p>
+<h1>Listado de Asignaturas</h1>
+<br />
+<br />
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Asignatura</th>
+      <th>Carrera</th>
+      <th>Grado</th>
+      <th>Profesor</th>
+      <th>Acciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asignatura of asignaturas">
+      <td>{{asignatura.idasignatura  }}</td>
+      <td>{{asignatura.desasignatura  }}</td>
+      <td>{{asignatura.carrera.descarrera  }}</td>
+      <td>{{asignatura.grado.desgrado  }}</td>
+      <td>{{asignatura.profesor.nomprofesor+ ' ' + asignatura.profesor.apeprofesor  }}</td>
+
+      <td>
+        <button  style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
+        <button  class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
