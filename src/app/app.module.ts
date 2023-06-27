@@ -5,14 +5,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ListarAlumnoComponent } from './components/alumno/listar-alumno/listar-alumno.component';
+import { AddAlumnoComponent } from './components/alumno/add-alumno/add-alumno.component';
+import { EditAlumnoComponent } from './components/alumno/edit-alumno/edit-alumno.component';
+import { ListarAsignaturaComponent } from './components/asignatura/listar-asignatura/listar-asignatura.component';
+import { AddAsignaturaComponent } from './components/asignatura/add-asignatura/add-asignatura.component';
+import { EditAsignaturaComponent } from './components/asignatura/edit-asignatura/edit-asignatura.component';
+import { ListarProfesorComponent } from './components/profesor/listar-profesor/listar-profesor.component';
+import { AddProfesorComponent } from './components/profesor/add-profesor/add-profesor.component';
+import { EditProfesorComponent } from './components/profesor/edit-profesor/edit-profesor.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListarAlumnoComponent,
+    AddAlumnoComponent,
+    EditAlumnoComponent,
+    ListarAsignaturaComponent,
+    AddAsignaturaComponent,
+    EditAsignaturaComponent,
+    ListarProfesorComponent,
+    AddProfesorComponent,
+    EditProfesorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
