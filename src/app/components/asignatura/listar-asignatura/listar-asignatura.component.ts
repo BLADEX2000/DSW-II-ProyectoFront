@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Asignatura } from 'src/app/models/Asignatura';
 import { AsignaturaService } from 'src/app/servicio/asignatura.service';
 
@@ -11,7 +12,7 @@ export class ListarAsignaturaComponent implements OnInit {
 
   asignaturas?:Asignatura[];
 
-  constructor(private asignaturaService:AsignaturaService) { }
+  constructor(private asignaturaService:AsignaturaService,private router: Router) { }
 
   ngOnInit(): void {
     this.asignaturaService.getAsignaturas().subscribe(
@@ -23,6 +24,16 @@ export class ListarAsignaturaComponent implements OnInit {
         console.log(error);
       }
     );
+
   }
 
+
+  nuevo(): void{
+    this.router.navigate(['nuevaAsignatura'])
+  }
+
+  editar(asignatura: Asignatura): void{
+    localStorage.setItem("id",asignatura.idasignatura.toString());
+    this.router.navigate(['editarAsignatura']);
+  }
 }

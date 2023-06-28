@@ -1,8 +1,12 @@
+<br />
+<br />
 <h1>Listado de Profesores</h1>
 <br />
 <br />
 
 <button (click)="nuevo()" class="btn btn-success">Agregar</button>
+<br />
+<br />
 
 <table class="table table-striped">
   <thead>
@@ -22,11 +26,9 @@
       <td>{{ profesor.apeprofesor }}</td>
       <td>{{ profesor.telfprofesor }}</td>
       <td>
-        <button (click)="editar(profesor)" style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
-        <button  class="btn btn-danger">Eliminar</button>
+        <button (click)="editar(profesor)" style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp;       
       </td>
     </tr>
   </tbody>
 </table>
-
 

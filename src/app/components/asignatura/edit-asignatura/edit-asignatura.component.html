@@ -1,1 +1,48 @@
-<p>edit-asignatura works!</p>
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Actualizar Asignaturas</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Asignatura:</label>
+                <input type="text" [(ngModel)]="asignatura.desasignatura" name="desasignatura" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Carrera:</label>
+                <div>
+                    <select name="carrera"  [(ngModel)]="asignatura.carrera.idcarrera"  class="form-control">
+                        <option value="" disabled> Elige una carrera</option>
+                        <option  *ngFor="let objetoc of carreras" [ngValue]="objetoc.idcarrera" > {{objetoc.descarrera}} </option>
+                    </select>
+                </div>         
+            </div>
+
+            <div class="form-group">
+                <label for="">Grado:</label>
+                <div>
+                    <select name="grado"  [(ngModel)]="asignatura.grado.idgrado"  class="form-control">
+                        <option value="" disabled> Elige un grado</option>
+                        <option  *ngFor="let objetog of grados" [ngValue]="objetog.idgrado" > {{objetog.desgrado}} </option>
+                    </select>
+                </div>         
+            </div>
+
+            <div class="form-group">
+                <label for="">Profesor(a):</label>
+                <div>
+                    <select name="grado"  [(ngModel)]="asignatura.profesor.idprofesor"  class="form-control">
+                        <option value="" disabled> Elige un profesor(a)</option>
+                        <option  *ngFor="let objetop of profesores" [ngValue]="objetop.idprofesor" > {{objetop.nomprofesor+' '+objetop.apeprofesor}} </option>
+                    </select>
+                </div>         
+            </div>
+
+
+            <button (click)="actualizar(asignatura)" class="btn btn-danger">Guardar</button> &nbsp;  
+            <button (click)="cancelar()" class="btn btn-secondary">Cancelar</button>
+        </form>
+
+    </div>
+</div>

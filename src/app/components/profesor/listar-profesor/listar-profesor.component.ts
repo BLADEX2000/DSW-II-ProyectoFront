@@ -4,13 +4,13 @@ import { Profesor } from 'src/app/models/Profesor';
 import { ProfesorService } from 'src/app/servicio/profesor.service';
 
 
+
 @Component({
   selector: 'app-listar-profesor',
   templateUrl: './listar-profesor.component.html',
   styleUrls: ['./listar-profesor.component.css']
 })
 export class ListarProfesorComponent implements OnInit {
-
 
   profesores?: Profesor[];
 

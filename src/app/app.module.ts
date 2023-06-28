@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { EditProfesorComponent } from './components/profesor/edit-profesor/edit-
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './components/shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { SharedModule } from './components/shared/shared.module';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
