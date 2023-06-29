@@ -36,4 +36,13 @@ export class ListarAsignaturaComponent implements OnInit {
     localStorage.setItem("id",asignatura.idasignatura.toString());
     this.router.navigate(['editarAsignatura']);
   }
+
+  eliminar(asignatura:Asignatura):void{
+    this.asignaturaService.deleteAsignatura(asignatura).subscribe(data=>{
+      this.asignaturas=this.asignaturas!.filter(p=>p!==asignatura);
+    });
+
+  }
+
+  
 }

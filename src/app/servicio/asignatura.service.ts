@@ -30,6 +30,10 @@ export class AsignaturaService {
   updateAsignatura(asignatura:Asignatura){
     return this.http.put<Asignatura>(this.url,asignatura);
   }
+  
+  deleteAsignatura(asignatura:Asignatura){
+    return this.http.delete<Asignatura>(this.url+"/"+asignatura.idasignatura);
+  }
 
   getCarreras(){
     return this.http.get<Carrera[]>(this.urlc);

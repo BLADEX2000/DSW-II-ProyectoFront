@@ -39,5 +39,12 @@ export class ListarProfesorComponent implements OnInit {
     localStorage.setItem("id",profesor.idprofesor.toString());
     this.router.navigate(['editarProfesor']);
   }
+  eliminar(profesor:Profesor):void{
+    this.profesorService.deleteProfesor(profesor).subscribe(data=>{
+      this.profesores=this.profesores!.filter(p=>p!==profesor);
+    });
+  }
+
+
 
 }

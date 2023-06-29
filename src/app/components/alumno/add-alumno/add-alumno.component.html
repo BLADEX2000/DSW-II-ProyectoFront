@@ -1,1 +1,56 @@
-<p>add-alumno works!</p>
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Alumnos</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Nombres:</label>
+                <input type="text" [(ngModel)]="alumno.nomalumno" name="nomalumno" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Apellidos:</label>
+                <input type="text" [(ngModel)]="alumno.apealumno" name="apealumno" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Telefono:</label>
+                <input type="text" [(ngModel)]="alumno.telfalumno" name="telfalumno" class="form-control">
+            </div>
+         
+            <div class="form-group">
+                <label for="">Seccion:</label>
+                <div>
+                    <select name="seccion"  [(ngModel)]="alumno.seccion"  class="form-control">
+                        <option value="" disabled> Elige una sección</option>
+                        <option  *ngFor="let objetoc of secciones" [ngValue]="objetoc.idseccion" > {{objetoc.desseccion}} </option>
+                    </select>
+                </div>         
+            </div>
+            <div class="form-group">
+                <label for="">Grado:</label>
+                <div>
+                    <select name="grado"  [(ngModel)]="alumno.grado"  class="form-control">
+                        <option value="" disabled> Elige una grado</option>
+                        <option  *ngFor="let objetoc of grados" [ngValue]="objetoc.idgrado" > {{objetoc.desgrado}} </option>
+                    </select>
+                </div>         
+            </div>
+            <div class="form-group">
+                <label for="">Carrera:</label>
+                <div>
+                    <select name="carrera"  [(ngModel)]="alumno.carrera"  class="form-control">
+                        <option value="" disabled> Elige una carrera</option>
+                        <option  *ngFor="let objetoc of carreras" [ngValue]="objetoc.idcarrera" > {{objetoc.descarrera}} </option>
+                    </select>
+                </div>         
+            </div>
+
+        
+            <button (click)="guardar(alumno)" class="btn btn-success">Agregar</button> &nbsp;  
+            <button (click)="cancelar()" class="btn btn-secondary">Cancelar</button>
+        </form>
+
+    </div>
+</div>

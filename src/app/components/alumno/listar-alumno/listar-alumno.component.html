@@ -1,7 +1,9 @@
 <br />
 <br />
 <h1>Listado de Alumnos</h1>
+
 <br />
+<button (click)="nuevo()" class="btn btn-success">Agregar</button>
 <br />
 
 
@@ -29,8 +31,8 @@
       <td>{{ alumno.grado.desgrado }}</td>
       <td>{{ alumno.carrera.descarrera }}</td>
       <td>
-        <button  style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
-        <button  class="btn btn-danger">Eliminar</button>
+        <button  (click)="editar(alumno)" style="margin-right: 10px" class="btn btn-warning"> Editar </button>&nbsp; 
+        <button (click)="eliminar(alumno)"  class="btn btn-danger">Eliminar</button>
       </td>
     </tr>
   </tbody>

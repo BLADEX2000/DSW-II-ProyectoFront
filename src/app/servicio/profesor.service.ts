@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Profesor } from '../models/Profesor';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +25,10 @@ export class ProfesorService {
 
   updateProfesor(profesor:Profesor){
     return this.http.put<Profesor>(this.url,profesor);
+  }
+  
+  deleteProfesor(profesor : Profesor){
+    return this.http.delete<Profesor>(this.url+"/"+profesor.idprofesor);
   }
 
 }
